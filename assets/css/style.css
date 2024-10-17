@@ -3,7 +3,8 @@
     --color-hover: oklch(0.535 0.074 297.532);
 }
 
-label, #toggle {
+label, #toggle
+{
     display: none;
 }
 
@@ -15,14 +16,16 @@ nav {
     border-radius: 10px;
 }
 
-.menu {
+.menu
+{
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
 }
 
-.menu a {
+.menu a
+{
     width: 20%;
     display: flex;
     align-items: center;
@@ -35,6 +38,49 @@ nav {
     color: white;
 }
 
-a:hover {
+a:hover
+{
     background-color: var(--color-hover);
 }
+
+
+
+@media screen and (max-width: 800px)
+{
+
+
+    .menu
+    {
+        display: none;
+        background-color: var(--color-bg);
+    }
+
+    nav
+    {
+        height: 90px;
+    }
+
+    label
+    {
+        display: block;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+    }
+
+    label:hover
+    {
+        color:black;
+    }
+
+
+    #toggle:checked + .menu
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+}
+
+
